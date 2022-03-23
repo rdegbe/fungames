@@ -2,17 +2,10 @@
 #include <conio.h>
 
 bool gameOver;
-// Map Dimensions
 const int WIDTH{20};
 const int HEIGHT{20};
-
-// Head positions
 int x, y;
-
-// Fruit posiions
 int fruitX, fruitY;
-
-// Score
 int score;
 
 enum eDirection{STOP=0, LEFT, RIGHT, UP, DOWN};
@@ -36,7 +29,6 @@ int main(){
     return 0;
 }
 
-// game setup
 void setUp(){
     gameOver =false;
     dir = STOP;
@@ -48,7 +40,7 @@ void setUp(){
 }
 
 void draw(){
-    system("cls");  //system("clear") on linux
+    system("cls");  //Clear screen
     for(int i{0}; i < WIDTH+2; i++)
         std::cout << "#";
     std::cout << std::endl;
